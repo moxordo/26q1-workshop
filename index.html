@@ -42,18 +42,24 @@
     justify-content: center;
     padding: 60px 80px;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
     transform: translateX(40px);
     text-align: center;
+    background: var(--bg);
   }
   .slide.active {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0s;
+    z-index: 1;
   }
   .slide.exit-left {
     opacity: 0;
+    visibility: hidden;
     transform: translateX(-40px);
   }
 
